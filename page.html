@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Component</title>
+  <style>
+    div {
+      border: 2px solid blueviolet
+    }
+    .highlight {
+      background-color: lightsalmon;
+      /* color: red; */
+      font-size: x-large;
+      /* align-self: center; */
+      padding: 10px 15px 10px 15px;
+      font-family: fantasy;
+    }
+    .first-tooltip {
+      background-color: azure;
+      border: none;
+      padding: 0px;
+    }
+  </style>
+</head>
+<body>
+  <script src="tooltip.js"></script>
+  <script src="confirm-link.js"></script>
+
+  <p class="test">
+    This is a simple new <reuse-tooltip class="first-tooltip" text="This is tooltip text(changed)">
+      <span class="highlight">Tooltip</span>
+    </reuse-tooltip>
+  </p>
+  <br/>
+  <reuse-tooltip id="second">Second ToolTip</reuse-tooltip>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  
+  <reuse-tooltip class="important" text="This is a tooltip"></reuse-tooltip>
+  <br/>
+  <br/>
+
+
+  <div>This is a normal div in light DOM</div>
+
+  <p>Go to <a is="reuse-confirm-link" href="wwww.google.com">Google</a></p>
+  
+</body>
+</html>
